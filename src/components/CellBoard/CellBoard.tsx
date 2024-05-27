@@ -8,7 +8,7 @@ interface Props {
 }
 
 const CellBoard: React.FC<Props> = ({items, changeCell}) => {
-  const styleBoard: CSSProperties = {display: 'flex', flexWrap: 'wrap', width: '170px', border: '1px solid #000', padding: '10px', justifyContent: 'space-around'};
+  const styleBoard: CSSProperties = {display: 'flex', flexWrap: 'wrap', width: '170px', border: '1px solid #000', padding: '10px', justifyContent: 'space-around', margin: '0 auto'};
 
   return (
     <div style={styleBoard}>

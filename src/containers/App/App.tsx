@@ -2,6 +2,7 @@ import './App.css';
 import {useState} from 'react';
 import {CharacterItems} from '../../types';
 import CellBoard from '../../components/CellBoard/CellBoard';
+import Counter from '../../components/Counter/Counter';
 
 const App = () => {
   const createItems = () => {
@@ -32,6 +33,7 @@ const App = () => {
   return (
     <div>
       <CellBoard changeCell={changeCell} items={items} />
+      <Counter items={items} />
     </div>
   );
 };
