@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Cell: React.FC<Props> = ({onChange, onRing, onClick}) => {
-  const styleContainer: CSSProperties = {width: '20px', height: '20px', backgroundColor: 'gray', margin: '3px'};
+  const styleContainer: CSSProperties = {width: '20px', height: '20px', backgroundColor: 'gray', margin: '4px'};
   const styleRing: CSSProperties = {display: 'none'};
 
   if(onChange) {

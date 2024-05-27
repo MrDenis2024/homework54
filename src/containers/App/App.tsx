@@ -1,7 +1,7 @@
 import './App.css';
 import {useState} from 'react';
 import {CharacterItems} from '../../types';
-import Cell from '../../components/Cell/Cell';
+import CellBoard from '../../components/CellBoard/CellBoard';
 
 const App = () => {
   const createItems = () => {
@@ -28,12 +28,10 @@ const App = () => {
     });
   };
 
+
   return (
     <div>
-      {items.map((item) => (
-          <Cell key={item.id} onClick={() => changeCell(item.id)} onRing={item.hasItem} onChange={item.clicked}/>
-        )
-      )}
+      <CellBoard changeCell={changeCell} items={items} />
     </div>
   );
 };
