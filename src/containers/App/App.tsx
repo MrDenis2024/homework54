@@ -18,14 +18,13 @@ const App = () => {
 
   const [items, setItems] = useState(createItems());
 
-
   const changeCell = (id: string) => {
     setItems((prevState) => {
       return prevState.map((item) => {
-        if(item.id == id) {
+        if(item.id === id) {
           return {...item, clicked: true};
-
         }
+
         return item;
       });
     });
