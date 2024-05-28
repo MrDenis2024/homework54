@@ -3,6 +3,7 @@ import {useState} from 'react';
 import {CharacterItems} from '../../types';
 import CellBoard from '../../components/CellBoard/CellBoard';
 import Counter from '../../components/Counter/Counter';
+import ResetGame from '../../components/ResetGame/ResetGame';
 
 const App = () => {
   const createItems = () => {
@@ -17,23 +18,28 @@ const App = () => {
 
   const [items, setItems] = useState(createItems());
 
+
   const changeCell = (id: string) => {
     setItems((prevState) => {
       return prevState.map((item) => {
         if(item.id == id) {
           return {...item, clicked: true};
-        }
 
+        }
         return item;
       });
     });
   };
 
+  const resetGame = () => {
+    setItems(createItems());
+  };
 
   return (
     <div>
       <CellBoard changeCell={changeCell} items={items} />
       <Counter items={items} />
+      <ResetGame  onClick={resetGame}/>
     </div>
   );
 };
